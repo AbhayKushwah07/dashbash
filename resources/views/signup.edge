@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up </title>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous'>
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <section class="signup">
+          
+            <div class="container">
+                <div class="signup-content  mt-4" style="box-shadow: 0px 0px 4px 0px;  width: 100px;">
+                    <form  id="signup-form" class="signup-form row " >
+                        <h2 class="form-title">Create account</h2>
+                        <div class="form-group col-md-6 ">
+                            <input type="text" class="form-input" onkeydown="return /^[a-zA-Z]*$/.test(event.key) || event.key === 'ArrowLeft' || event.key === 'ArrowRight' || event.key === 'Delete'"
+                            name="first_name" id="first_name" placeholder="First Name"/>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-input" onkeydown="return /^[a-zA-Z]*$/.test(event.key) || event.key === 'ArrowLeft' || event.key === 'ArrowRight' || event.key === 'Delete'" name="last_name" id="last_name" placeholder="Last Name(optional)"/>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <input type="email" class="form-input"  name="email" id="email" placeholder="Your Email"/>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <input type="text" class="form-input" onkeydown="return /[0-9\b\t]/.test(event.key) || ['ArrowLeft', 'ArrowRight', 'Delete'].includes(event.key) || event.keyCode === 8"
+                            name="phone" id="phone" placeholder="Contact Number"/>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <input type="password" class="form-input" name="password" id="password" placeholder="Password"/>
+                            <span toggle="#password" class="zmdi zmdi-eye-off field-icon toggle-password"></span>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <input type="password" class="form-input" name="confirm_password" id="confirm_password" placeholder="Confirm password"/>
+                            <span toggle="#confirm_password" class="zmdi zmdi-eye-off field-icon toggle-password"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <select class="form-select" name="department" id="department">
+                                <option value="" disabled selected>Select department</option>
+                                <option value="IT">Information Technology</option>
+                                <option value="HR">Human Resources</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Marketing">Marketing</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <select class="form-select" name="admin_status" id="admin_status">
+                                <option value="" disabled selected>Admin Status</option>
+                                <option value="1">Admin</option>
+                                <option value="0">User</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group">
+                           <button type="submit"  id="submit" class="form-submit" >Submit</button>
+                        </div>
+                    </form>
+                    <p class="loginhere">
+                        Have already an account ? <a href="/login" class="loginhere-link">Login here</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+  
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL' crossorigin='anonymous'></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/jqvalidate.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

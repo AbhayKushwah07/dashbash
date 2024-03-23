@@ -1,0 +1,6 @@
+.vertical-ellipsis {
+    display: inline-block;
+    transform: rotate(90deg);
+    cursor: pointer;
+    font-size: large;
+}

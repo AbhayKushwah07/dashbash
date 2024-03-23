@@ -1,0 +1,63 @@
+
+    <div class="main">
+
+        <section class="signup">
+          
+            <div class="container ">
+                <div class="signup-content border border-black rounded-0 mt-2">
+                    <form  id="edit-form" class="signup-form row ">
+                        <div class="form-group col-md-6">
+                            <label for="e_first_name" >First Name</label>
+                            <input type="text" class="form-input " onkeydown="return !/[0-9]/.test(event.key)" name="first_name" id="e_first_name" placeholder="First Name"/>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="e_last_name">Last Name</label>
+                            <input type="text" class="form-input" onkeydown="return !/[0-9]/.test(event.key)" name="last_name" id="e_last_name" placeholder="Last Name(optional)"/>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="newEmail">Email</label>
+                            <input type="email" class="form-input"  name="newEmail" id="newEmail" placeholder="Your Email"/>
+                            <input type="hidden" class="form-input"  name="oldEmail" id="oldEmail"/>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="newPhone">Phone</label>
+                            <input type="text" class="form-input" onkeydown="return /[0-9\b\t]/.test(event.key) || ['ArrowLeft', 'ArrowRight', 'Delete'].includes(event.key) || event.keyCode === 8" name="newPhone" id="newPhone" placeholder="Contact Number"/>
+                            <input type="hidden" class="form-input"  name="oldPhone" id="oldPhone" placeholder="Contact Number"/>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="e_password">Password</label>
+                            <input type="text" class="form-input" name="password" id="e_password" placeholder="Password"/>
+                            <span toggle="#e_password" class="zmdi zmdi-eye-off field-icon e_toggle-password"></span>
+                        </div>
+                       
+                        <div class="form-group col-md-6">
+                            <label for="e_department">Department</label>
+                            <select class="form-select" name="department" id="e_department">
+                                <option value="" disabled selected>Select department</option>
+                                <option value="IT">Information Technology</option>
+                                <option value="HR">Human Resources</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Marketing">Marketing</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="e_admin_status">Admin Status</label>
+                            <select class="form-select" name="admin_status" id="e_admin_status">
+                                <option value="" disabled selected>Admin Status</option>
+                                <option value="1">Admin</option>
+                                <option value="0">User</option>
+
+                            </select>
+                        </div>
+                        <input type="hidden" id="e-id" name="id">
+                    </form>
+                    
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+  
+   
